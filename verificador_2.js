@@ -1,4 +1,4 @@
-var data = new Date()
+var data = new Date() 
 var ano = data.getFullYear()
 var nascimento = document.getElementById('txtano')
 var src = document.getElementById('src')
