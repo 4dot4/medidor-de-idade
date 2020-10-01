@@ -1,6 +1,7 @@
-var data = new Date() 
+var data = new Date()
 var ano = data.getFullYear()
 var nascimento = document.getElementById('txtano')
+var button = document.querySelector('button.button button1')
 var src = document.getElementById('src')
 var criança_homem = document.createElement('img')
 var homem_novo = document.createElement('img')
@@ -27,10 +28,12 @@ function verificar(){
     nascimento = document.getElementById('txtano')
     nascimento = Number(nascimento.value)
     idade = ano - nascimento
-    
-    if(nascimento > ano){
-        src.innerText = 'viajem no tempo detectada'
+    src.style.color = 'black'
+
+    if(nascimento > ano || nascimento == 0){
+        src.innerText = 'Data invalida'
         src.style.color = 'red'
+        button.innerText = 'nada'
     }
         else if(mas.checked == true){
 
@@ -66,4 +69,4 @@ function verificar(){
             }
     }
 }
-    
+   
